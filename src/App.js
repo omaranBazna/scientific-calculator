@@ -53,16 +53,16 @@ click functions
   function addNine(){
     setDisplay("1")
   }
-  function addPlus(){
+  function Plus(){
     setDisplay("1")
   }
-  function addMinus(){
+  function Minus(){
     setDisplay("1")
   }
-  function addDivid(){
+  function Divid(){
     setDisplay("1")
   }
-  function addMultipal(){
+  function Multipal(){
     setDisplay("1")
   }
   function addDecimal(){
@@ -82,8 +82,8 @@ click functions
 
        <div className="operator1">
         <Button sign="AC" wide={true} red={true} id="AC" press={AC} />
-        <Button sign="/" id="divide" grey={true}/>
-        <Button sign="x" id="multiply" grey={true}/>
+        <Button sign="/" id="divide" grey={true}  press={Divid}/>
+        <Button sign="x" id="multiply" grey={true}  press={Multipal}/>
 
         
        </div>
@@ -91,32 +91,32 @@ click functions
        <div className="numbers">
 
          <div className="row">
-          <Button sign="7" id="seven"/>
-          <Button sign="8" id="eight"/>
-          <Button sign="9" id="nine"/>
+          <Button sign="7" id="seven"  press={addSeven}/>
+          <Button sign="8" id="eight"  press={addEight}/>
+          <Button sign="9" id="nine"  press={addNine}/>
          </div>
          
          <div className="row">
-          <Button sign="4" id="four"/>
-          <Button sign="5" id="five"/>
-          <Button sign="6" id="six"/>
+          <Button sign="4" id="four"  press={addFour}/>
+          <Button sign="5" id="five"  press={addFive}/>
+          <Button sign="6" id="six"  press={addSix}/>
          </div>
 
          <div className="row">
           <Button sign="1" id="one" press={addOne}/>
-          <Button sign="2" id="two"/>
-          <Button sign="3" id="three"/>
+          <Button sign="2" id="two"  press={addTwo}  />
+          <Button sign="3" id="three"  press={addThree}/>
          </div>
          <div className="row">
-          <Button sign="0" wide={true} id="zero"/>
-          <Button sign="." id="decimal"/>
+          <Button sign="0" wide={true} id="zero"  press={addZero} />
+          <Button sign="." id="decimal"  press={addDecimal}/>
          
          </div>
       </div>
       <div className="operator2">
-        <Button sign="+" id="add" grey={true}/>
-        <Button sign="-" id="subtract" grey={true}/>
-        <Button sign="=" high={true} id="seven"  blue={true}/>
+        <Button sign="+" id="add" grey={true}  press={Plus}/>
+        <Button sign="-" id="subtract" grey={true}  press={Minus} />
+        <Button sign="=" high={true} id="seven"  blue={true}  press={Equal}/>
       </div>
 
    
