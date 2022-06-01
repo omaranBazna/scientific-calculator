@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+/**
+ * Scientific Calculator Created By Omaran Bazna on 6/1/2022
+ * Email:omran4d@gmail.com
+ * 
+ */
 
+
+import React from 'react'
+import './App.css';
+import Button from './Components/Button'
+import Result from './Components/Result'
+///main component of the calculator
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+
+
+      {/* build up the calculator */}
+     <Result />
+     <Button sign="+" />
+     <Button sign="-" />
     </div>
   );
 }
