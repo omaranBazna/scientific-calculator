@@ -7,24 +7,81 @@
 
 import React from 'react'
 import './App.css';
-import Button from './Components/Button'
-import Result from './Components/Result'
+import Button from './Components/Button';
+import Display from './Components/Display';
+import {useState} from 'react'
 ///main component of the calculator
 function App() {
+  const [display,setDisplay]=useState("")
+
+{/*
+click functions
+*/}
+  function AC(){
+   setDisplay("")
+  }
+  function Equal(){
+    setDisplay("")
+   }
+  function addZero(){
+
+  }
+  function addOne(){
+    setDisplay("1")
+  }
+  function addTwo(){
+    setDisplay("1")
+  }
+  function addThree(){
+    setDisplay("1")
+  }
+  function addFour(){
+    setDisplay("1")
+  }
+  function addFive(){
+    setDisplay("1")
+  }
+  function addSix(){
+    setDisplay("1")
+  }
+  function addSeven(){
+    setDisplay("1")
+  }
+  function addEight(){
+    setDisplay("1")
+  }
+  function addNine(){
+    setDisplay("1")
+  }
+  function addPlus(){
+    setDisplay("1")
+  }
+  function addMinus(){
+    setDisplay("1")
+  }
+  function addDivid(){
+    setDisplay("1")
+  }
+  function addMultipal(){
+    setDisplay("1")
+  }
+  function addDecimal(){
+    setDisplay("1")
+  }
   return (
     <div className="App">
       
 
 
       {/* build up the calculator */}
-     <Result />
+     <Display value={display}/>
       
 
       {/*Btn Container */}
-     <div className="Btns">
+     <div className="Btns" >
 
        <div className="operator1">
-        <Button sign="AC" wide={true} red={true} id="seven"/>
+        <Button sign="AC" wide={true} red={true} id="AC" press={AC} />
         <Button sign="/" id="divide" grey={true}/>
         <Button sign="x" id="multiply" grey={true}/>
 
@@ -46,7 +103,7 @@ function App() {
          </div>
 
          <div className="row">
-          <Button sign="1" id="one"/>
+          <Button sign="1" id="one" press={addOne}/>
           <Button sign="2" id="two"/>
           <Button sign="3" id="three"/>
          </div>

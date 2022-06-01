@@ -1,18 +1,18 @@
 import React from 'react'
-import { useState } from 'react'
+
 /*
 The Result Component 
 
 */
 
 
-export default function Result(){
-    const [view,setView]=useState("")
+export default function Display(props){
+  
     
 return (
 
     <div className="result" id="display" >
-       
+       {props.value}
     </div>
 )
 
