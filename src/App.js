@@ -18,8 +18,31 @@ function App() {
 
       {/* build up the calculator */}
      <Result />
-     <Button sign="+" />
-     <Button sign="-" />
+      
+
+      {/*Btn Container */}
+     <div className="Btns">
+       <div className="numbers">
+         <div className="row">
+          <Button sign="7" id="seven"/>
+          <Button sign="8" id="eight"/>
+          <Button sign="9" id="nine"/>
+         </div>
+         
+         <div className="row">
+          <Button sign="4" id="four"/>
+          <Button sign="5" id="five"/>
+          <Button sign="6" id="six"/>
+         </div>
+
+         <div className="row">
+          <Button sign="1" id="one"/>
+          <Button sign="2" id="two"/>
+          <Button sign="3" id="three"/>
+         </div>
+   
+     </div>
+     </div>
     </div>
   );
 }
