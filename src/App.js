@@ -22,7 +22,17 @@ function App() {
 
       {/*Btn Container */}
      <div className="Btns">
+
+       <div className="operator1">
+        <Button sign="AC" wide={true} red={true} id="seven"/>
+        <Button sign="/" id="divide" grey={true}/>
+        <Button sign="x" id="multiply" grey={true}/>
+
+        
+       </div>
+      <div className="container">
        <div className="numbers">
+
          <div className="row">
           <Button sign="7" id="seven"/>
           <Button sign="8" id="eight"/>
@@ -40,6 +50,18 @@ function App() {
           <Button sign="2" id="two"/>
           <Button sign="3" id="three"/>
          </div>
+         <div className="row">
+          <Button sign="0" wide={true} id="zero"/>
+          <Button sign="." id="decimal"/>
+         
+         </div>
+      </div>
+      <div className="operator2">
+        <Button sign="+" id="add" grey={true}/>
+        <Button sign="-" id="subtract" grey={true}/>
+        <Button sign="=" high={true} id="seven"  blue={true}/>
+      </div>
+
    
      </div>
      </div>

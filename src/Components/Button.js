@@ -4,7 +4,7 @@ import React from 'react'
 */
 export default function Button(props){
     return(
-        <div className="button">
+        <div className={["button",props.wide?"wide":"",props.high?"high":"",props.red?"red":"",props.blue?"blue":"",props.grey?"grey":""].join(' ')}>
             {props.sign}
         </div>
     )

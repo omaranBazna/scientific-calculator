@@ -4,24 +4,74 @@
   align-items:center;
   justify-content:center;
   height:100vh;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
-.Btns{
+.numbers{
 
   display:flex;
   align-items:center;
   justify-content:center;
   flex-direction: column;
 }
-
-.button{
-  width:50px;
+.operator1{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.result{
+  width:240px;
   height:50px;
-  background:rgb(158, 25, 25);
+  border:2px solid black;
+  background:white;
+  border-radius:10px;
+}
+.button{
+  text-align:center;
+  line-height:50px;
+  width:60px;
+  height:50px;
+  background:rgb(199, 204, 206);
   border:2px solid black;
   outline:white;
   border-radius:10px;
+  color:rgb(0, 0, 0);
+  cursor:pointer;
+
 }
+.button:hover{
+  background:rgb(153, 153, 153);
+}
+.red{
+  background-color: brown;
+  color:white;
+}
+.grey{
+  background-color: rgb(70, 70, 70);
+  color:white;
+}
+.blue{
+  background-color: rgb(6, 47, 66);
+  color:white;
+}
+.wide{
+  width:120px;
+}
+.high{
+  line-height:100px;
+  height:100px;
+}
+
+
 .row{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.container{
   display:flex;
   flex-direction: row;
   align-items: center;
