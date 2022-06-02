@@ -24,7 +24,7 @@ click functions
     setDisplay("")
    }
   function addZero(){
-
+    setDisplay(old=>old+"0")  
   }
   function addOne(){
     setDisplay("1")
@@ -87,7 +87,7 @@ click functions
 
         
        </div>
-      <div className="container">
+       <div className="container">
        <div className="numbers">
 
          <div className="row">
