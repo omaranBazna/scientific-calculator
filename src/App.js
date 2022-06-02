@@ -42,7 +42,7 @@ click functions
     setDisplay(old=>old+"5")
   }
   function addSix(){
-    setDisplay("1")
+    setDisplay(old=>old+"6")
   }
   function addSeven(){
     setDisplay("1")
