@@ -51,7 +51,7 @@ click functions
     setDisplay(old=>old+"8")
   }
   function addNine(){
-    setDisplay("1")
+    setDisplay(old=>old+"9")
   }
   function Plus(){
     setDisplay("1")
