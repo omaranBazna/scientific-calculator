@@ -54,19 +54,19 @@ click functions
     setDisplay(old=>old+"9")
   }
   function Plus(){
-    setDisplay("1")
+ 
   }
   function Minus(){
-    setDisplay("1")
+
   }
   function Divid(){
-    setDisplay("1")
+   
   }
   function Multipal(){
-    setDisplay("1")
+  
   }
   function addDecimal(){
-    setDisplay("1")
+   
   }
   return (
     <div className="App">
