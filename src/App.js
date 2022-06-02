@@ -27,10 +27,10 @@ click functions
     setDisplay(old=>old+"0")  
   }
   function addOne(){
-    setDisplay("1")
+    setDisplay(old=>old+"1")
   }
   function addTwo(){
-    setDisplay("1")
+    setDisplay(old=>old+"2")
   }
   function addThree(){
     setDisplay("1")
