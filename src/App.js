@@ -33,7 +33,7 @@ click functions
     setDisplay(old=>old+"2")
   }
   function addThree(){
-    setDisplay("1")
+    setDisplay(old=>old+"3")
   }
   function addFour(){
     setDisplay("1")
