@@ -45,7 +45,7 @@ click functions
     setDisplay(old=>old+"6")
   }
   function addSeven(){
-    setDisplay("1")
+    setDisplay(old=>old+"7")
   }
   function addEight(){
     setDisplay("1")
