@@ -2,68 +2,153 @@
  * Scientific Calculator Created By Omaran Bazna on 6/1/2022
  * Email:omran4d@gmail.com
  * 
- */
+ */ 
 
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import './App.css';
 import Button from './Components/Button';
 import Display from './Components/Display';
 import {useState} from 'react'
+
+
+
+class node {
+  constructor(val, left,right) {
+    this.left = left;
+    this.right = right;
+    this.val=val;
+  }
+  clone() {
+    return new node(this.val, this.left,this.right);
+  }
+  set(val,left,right){
+    this.val=val;
+    this.left=left;
+    this.right=right;
+
+  }
+}
+
+
+
+
+
+
+
+const root=new node("",null,null);
+let listener="node"
+let val=""
+
 ///main component of the calculator
 function App() {
   const [display,setDisplay]=useState("")
 
-{/*
+
+  
+
+  {/*
 click functions
 */}
+
   function AC(){
-   setDisplay("")
+   setDisplay("") 
+   root.set("-",0,10);
   }
   function Equal(){
     setDisplay("")
+     if(listener=="node"){
+       root.val=val
+     }
+     if(listener=="right"){
+      root.right=val
+    }
+    val=""
+    console.log(root);
    }
   function addZero(){
     setDisplay(old=>old+"0")  
+    val =val+"0"
   }
   function addOne(){
     setDisplay(old=>old+"1")
+    val =val+"1"
   }
   function addTwo(){
     setDisplay(old=>old+"2")
+    val =val+"2"
   }
   function addThree(){
     setDisplay(old=>old+"3")
+    val =val+"3"
   }
   function addFour(){
     setDisplay(old=>old+"4")
+    val =val+"4"
   }
   function addFive(){
     setDisplay(old=>old+"5")
+    val =val+"5"
   }
   function addSix(){
     setDisplay(old=>old+"6")
+    val =val+"6"
   }
   function addSeven(){
     setDisplay(old=>old+"7")
+    val =val+"7"
   }
   function addEight(){
     setDisplay(old=>old+"8")
+    val =val+"8"
   }
   function addNine(){
     setDisplay(old=>old+"9")
+    val =val+"9"
   }
   function Plus(){
- 
-  }
-  function Minus(){
-
-  }
-  function Divid(){
+    setDisplay(old=>old+"+")
+    root.right=val
+   let temp=root.clone();
+    
+    root.set("+",temp,null)
+    listener="right"
+    val = ""
    
   }
-  function Multipal(){
+  function Minus(){
+    setDisplay(old=>old+"-")
+   let temp=root.clone();
+    root.set("-",temp,val)
+    val = ""
   
+  }
+  function Divid(){
+    setDisplay(old=>old+"/")
+    let temp=root;
+    while(temp.right.val =="*" || temp.right.val=="/"){
+    
+      temp=temp.right
+    }
+    temp.val="/"
+    temp.left =new node(temp.right,null,null);
+    temp.right=new node(val,null,null);
+   val = ""
+  }
+  function Multipal(){
+    setDisplay(old=>old+"*")
+    let temp=root;
+    console.log(temp)
+    /*
+     while(temp.right.val =="*" || temp.right.val=="/"){
+      console.log("yes ")
+       temp=temp.right
+     }
+     */
+    
+     temp.right=new node("*",temp.right,val)
+
+    val = ""
   }
   function addDecimal(){
    
