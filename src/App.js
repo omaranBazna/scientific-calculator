@@ -35,9 +35,9 @@ class node {
 
 
 
+let listener=[0]
+const root=new node("+",0,listener);
 
-const root=new node("",null,null);
-let listener="node"
 let val=""
 
 ///main component of the calculator
@@ -57,12 +57,7 @@ click functions
   }
   function Equal(){
     setDisplay("")
-     if(listener=="node"){
-       root.val=val
-     }
-     if(listener=="right"){
-      root.right=val
-    }
+    listener[0]=val
     val=""
     console.log(root);
    }
@@ -111,47 +106,57 @@ click functions
     root.right=val
    let temp=root.clone();
     
-    root.set("+",temp,null)
-    listener="right"
+    root.set("+",temp,listener)
+    
     val = ""
    
   }
   function Minus(){
     setDisplay(old=>old+"-")
+    root.right=val
    let temp=root.clone();
-    root.set("-",temp,val)
+    
+    root.set("-",temp,listener)
+    
     val = ""
   
   }
   function Divid(){
     setDisplay(old=>old+"/")
     let temp=root;
-    while(temp.right.val =="*" || temp.right.val=="/"){
+  
+
     
-      temp=temp.right
-    }
-    temp.val="/"
-    temp.left =new node(temp.right,null,null);
-    temp.right=new node(val,null,null);
-   val = ""
+     temp.right=new node("/",val,listener)
+
+    val = ""
   }
   function Multipal(){
     setDisplay(old=>old+"*")
-    let temp=root;
-    console.log(temp)
-    /*
-     while(temp.right.val =="*" || temp.right.val=="/"){
-      console.log("yes ")
-       temp=temp.right
-     }
-     */
-    
-     temp.right=new node("*",temp.right,val)
+   // const tempNode=searchTree(root,listener)
+      console.log(tempNode)
+     tempNode=new node("*",val,listener)
 
     val = ""
   }
   function addDecimal(){
    
+  }
+
+  function searchTree(treeRoot,target){
+   const query=[treeRoot]
+
+   while(query.length){
+     if(query[0].val===target){
+       return query[0]
+     }else{
+       if(query[0].left){query.push(query[0].left)}
+       if(query[0].right){query.push(query[0].right)}
+       query.unshift();
+      
+     }
+   }
+   return null;
   }
   return (
     <div className="App">
