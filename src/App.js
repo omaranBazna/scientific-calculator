@@ -133,7 +133,7 @@ click functions
   }
   function Multipal(){
     setDisplay(old=>old+"*")
-   // const tempNode=searchTree(root,listener)
+    const tempNode=searchTree(root,listener)
       console.log(tempNode)
      tempNode=new node("*",val,listener)
 
@@ -152,7 +152,7 @@ click functions
      }else{
        if(query[0].left){query.push(query[0].left)}
        if(query[0].right){query.push(query[0].right)}
-       query.unshift();
+       query.shift();
       
      }
    }
