@@ -77,3 +77,9 @@
   align-items: center;
   justify-content: center;
 }
+.description{
+  padding:20px;
+  background:lightgrey;
+  border-radius:20px;
+  margin-top:20px;
+}
