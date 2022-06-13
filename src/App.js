@@ -212,6 +212,9 @@ click functions
    
      </div>
      </div>
+     <div className="description">
+      This calculator show you how the calculator memory work to handle the diffrent operations
+     </div>
     </div>
   );
 }
