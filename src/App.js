@@ -11,6 +11,11 @@ will do more research on the role of binary seacrh tree in ordering the operatio
 
 
 */
+/* 
+the vision is to have the binary tree for operations above the calculator 
+and 
+*/
+
 
 import React, { useEffect } from 'react'
 import './App.css';
