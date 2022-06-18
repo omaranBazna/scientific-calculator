@@ -49,21 +49,26 @@
 .red{
   background-color: brown;
   color:white;
+  margin:5px;
 }
 .grey{
   background-color: rgb(70, 70, 70);
   color:white;
+  margin:5px;
 }
 .blue{
   background-color: rgb(6, 47, 66);
   color:white;
+  margin:5px;
 }
 .wide{
   width:120px;
+  margin:5px;
 }
 .high{
   line-height:100px;
   height:100px;
+  margin:5px;
 }
 
 

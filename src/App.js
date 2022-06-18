@@ -56,10 +56,11 @@ click functions
    root.set("-",0,10);
   }
   function Equal(){
-    setDisplay("")
+    console.log(eval(display))
+    setDisplay(eval(display))
     listener[0]=val
     val=""
-    console.log(root);
+  //  console.log(root);
    }
   function addZero(){
     setDisplay(old=>old+"0")  
