@@ -5,6 +5,13 @@
  */ 
 
 
+/* 
+will use Bootstrap to design responsive calculator
+will do more research on the role of binary seacrh tree in ordering the operations 
+
+
+*/
+
 import React, { useEffect } from 'react'
 import './App.css';
 import Button from './Components/Button';
